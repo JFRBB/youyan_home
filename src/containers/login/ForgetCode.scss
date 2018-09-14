@@ -1,0 +1,90 @@
+#ForgetCode {
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+    background: #050e1f;
+    .forget_content{
+      width: 478px;
+      margin-top: -30px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px 0 40px;
+      box-shadow: 5px 6px 20px #e2e2e2;
+      .forget_title{
+        font-size: 18px;
+        color: #13b5b1;
+      }
+      .code_row{
+        width: 78%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input{
+          width: 78%;
+          height: 34px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 12px;
+          padding-left: 20px;
+          color: inherit;
+          margin-top: 15px;
+        }
+      }
+      .get_code{
+        display: inline-block;
+        font-size: 12px;
+        background: #13b5b1;
+        border-radius: 5px;
+        width: 120px;
+        height: 34px;
+        color: #fff;
+        text-align: center;
+        line-height: 34px;
+        margin-top: 15px;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+      input{
+        width: 78%;
+        height: 34px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+        padding-left: 20px;
+        color: inherit;
+        margin-top: 15px;
+      }
+      .forget_btn{
+        width: 66%;
+        margin: 0 auto;
+        height: 39px;
+        line-height: 39px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        background: #ccc;
+        position: relative;
+        outline: 0;
+        letter-spacing: .2em;
+        cursor: default;
+        overflow: hidden;
+        user-select: none;
+        display: block;
+        margin-top: 15px;
+      }
+      .active{
+        background: #13b5b1 !important;
+        cursor: pointer;
+      }
+    }
+  }
+}

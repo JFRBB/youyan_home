@@ -1,0 +1,44 @@
+#Foot{
+  .footer{
+    background: #646C7B;
+    .footer_content{
+      width: 1242px;
+      height: 70px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #FFFFFF;
+      .foot_left{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+        .text1{
+          margin-right: 40px;
+        }
+        .foot_item{
+          cursor: pointer;
+        }
+        .split{
+          width: 2px;
+          border-left: 1px solid #fff;
+          height: 10px;
+          margin: 0 10px;
+        }
+      }
+      .foot_right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+          width: 30px;
+          height: 30px;
+          margin-left: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,633 @@
+#TransactionCenter{
+  background: #f2f2f2;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  .container{
+    max-width: 1800px;
+    min-width: 1200px;
+    padding: 10px 0px 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .divider{
+      width: 4px;
+      height: 18px;
+      background: #1890FF;
+      margin-right: 6px;
+    }
+    .left_container{
+      // width: 436px;
+      width: 23%;
+      background: #fff;
+      .left_top{
+        .search_box{
+          padding: 10px 5px 13px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .search_input{
+            width: 53.5%;
+            height: 32px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border: 1px solid #646C7B;
+            position: relative;
+            border-radius: 16px;
+            padding: 0 30px 0 10px;
+            input{
+              width: 100%;
+              height: 30px;
+              font-size: 12px;
+              border-radius: 10px;
+              &:focus{
+                outline: none;
+                border: none !important;
+              }
+            }
+            i{
+              position: absolute;
+              top: 5px;
+              right: 10px;
+              font-size: 20px;
+            }
+          }
+          .option_wrap{
+            width: 40%;
+            .option{
+              .ant-radio-group{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+              }
+              .ant-radio-wrapper{
+                font-size: 12px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .ant-radio-inner{
+                  width: 10px;
+                  height: 10px;
+                  border-color: #343A45;
+                }
+                .ant-radio-inner:after{
+                  width: 6px;
+                  height: 6px;
+                  left: 1px;
+                  top: 1px;
+                  background-color: #343A45;
+                }
+              }
+
+            }
+            .ant-checkbox-wrapper{
+              font-size: 12px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              .ant-checkbox{
+                top: 0;
+              }
+              .ant-checkbox-inner{
+                width: 11px;
+                height: 11px;
+              }
+              .ant-checkbox-inner:after{
+                left: 2.571429px;
+                top: -0.857143px;
+              }
+            }
+          }
+        }
+        .tab_container{
+          .tab_header{
+            padding-left: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .tab_item{
+              min-width: 40px;
+              height: 24px;
+              line-height: 24px;
+              font-size: 12px;
+              font-weight: 500;
+              text-align: center;
+              color: #898989;
+              padding: 0 10px;
+              border-radius: 0;
+              margin-right: 6px;
+              cursor: pointer;
+            }
+            .active{
+              background: #646C7B;
+              color: #fff;
+            }
+          }
+          .tab_title{
+            padding-right: 8px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #F5F5F6;
+            .tab_title_item{
+              width: calc(100% / 3);
+              min-height: 30px;
+              line-height: 30px;
+              text-align: center;
+            }
+          }
+          .tab_content{
+            height: 450px;
+            overflow: auto;
+            .tab_content_item{
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              border-top: 1px solid #eee;
+              cursor: pointer;
+              height: 30px;
+              >div{
+                width: calc(100% /3);
+                text-align: center;
+              }
+              .tab_coin_item{
+                padding-left: 40px;
+                text-align: left;
+                i{
+                  font-size: 16px;
+                  margin-right: 2px;
+                  cursor: pointer;
+                }
+              }
+              .tab_coin_price{
+                color: #00b275;
+              }
+            }
+          }
+        }
+      }
+      .split{
+        height: 15px;
+        background: #f2f2f2;
+      }
+      .left_down {
+        .left_down_title{
+          padding-left: 10px;
+          padding-top: 6px;
+          font-size: 16px;
+          color: #27313e;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .left_down_tab{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px 20px 0;
+          .tab_item{
+            min-width: 42px;
+            height: 24px;
+            line-height: 24px;
+            margin-right: 5px;
+            color: #898989;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+            padding: 0 10px;
+            cursor: pointer;
+          }
+          .active{
+            color: #fff;
+            background: #646C7B;
+          }
+        }
+        .left_down_th{
+          display: flex;
+          align-items: center;
+          height: 30px;
+          background: #f9f9f9;
+          font-weight: 500;
+          color: #343A45;
+          div{
+            width: 31%;
+            text-align: center;
+            padding: 0 10px;
+          }
+          div:nth-child(3){
+            width: 38%;
+          }
+        }
+        .left_down_item{
+          height: 30px;
+          border-color: #eee;
+          color: #646C7B;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #F5F5F6;
+          >div{
+            line-height: 27px;
+            text-align: center;
+          }
+          .tr_time, .tr_price{
+            width: 31%;
+          }
+          .tr_number{
+            width: 38%;
+          }
+        }
+      }
+    }
+    .right_container{
+      width: 76%;
+      .coin_header{
+        background: #fff;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        .coin_details{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 20px;
+          min-width: 365px;
+          i{
+            margin-right: 10px;
+            font-size: 18px;
+          }
+          .coin_name{
+            font-size: 20px;
+            font-weight: 500;
+            color: #343A45;
+          }
+          .coin_price{
+            font-size: 20px;
+            color: #343A45;
+            margin-left: 10px;
+          }
+          .coin_info{
+            margin-left: 15px;
+            font-size: 16px;
+            color:  #343A45;
+          }
+        }
+        .ticker_section{
+          width: 850px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .title{
+            font-size: 16px;
+            color: #343A45;
+          }
+          .describe{
+            font-size: 16px;
+            color: #343A45;
+          }
+          .upOrDown{
+            font-size: 16px;
+            color: #00b275 !important;
+          }
+        }
+        .anticon-bulb{
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 20px;
+          cursor: pointer;
+          color: #27313e;
+        }
+      }
+      .right_center{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .chart_content{
+        margin-top: 10px;
+        width: 900px;
+        .chart{
+          height: 400px;
+          background: #fff;
+          position: relative;
+        }
+        .login_box{
+          height: 350px;
+          background: #fff;
+          margin-top: 10px;
+          padding-right: 20px;
+          position: relative;
+          .header{
+            display: flex;
+            padding-top: 10px;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #F5F5F6;
+            >div{
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+            }
+            .item{
+              margin-left: 20px;
+              padding: 0 10px;
+              height: 30px;
+              line-height: 30px;
+              color: #898989;
+              font-size: 12px;
+              cursor: pointer;
+              text-align: center;
+            }
+            .active{
+              color: #fff;
+              background-color: #646C7B;
+            }
+            .ant-checkbox-wrapper{
+              font-size: 12px;
+            }
+          }
+          .login_tips{
+            width: 100%;
+            height: 350px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: #c1c4ce;
+            .login_btn{
+              color: #52cbca;
+              cursor: pointer;
+              margin: 0 5px;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+            .register_btn{
+              color: #ffbc32;
+              cursor: pointer;
+              margin: 0 5px;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .deal_content{
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 12px 0 12px 20px;
+          .only_sell,.only_buy{
+            flex: 1;
+            padding-right: 15px;
+            border-right: 1px dashed #ccc;
+            .sell_add{
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .sell_add_btn{
+                font-size: 12px;
+                color: #1890FF;
+                cursor: pointer;
+              }
+            }
+            .sell_input{
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              background: #F5F5F6;
+              border-radius: 4px;
+              width: 100%;
+              height: 36px;
+              padding: 0 8px;
+              margin-top: 10px;
+              .label{
+                width: 30px;
+              }
+              .sell_price{
+                background: #F5F5F6;
+                width: auto;
+                flex: 1;
+                margin-left: 10px;
+              }
+              .sell_price:focus{
+                border: none !important;
+              }
+            }
+            .sell_about{
+              margin-top: 4px;
+              margin-left: 48px;
+              color: #A5ADB8;
+            }
+            .ant-slider-track{
+              background: #00C087;
+            }
+            .ant-slider-handle{
+              border: solid 2px #00C087;
+            }
+            .ant-slider-dot-active{
+              border-color: #00C087;
+            }
+            .sell_money{
+              margin-top: 15px;
+              .lable{
+                color: #A5ADB8;
+              }
+              .sell_money_num{
+                 color: #343A45;
+                 margin-left: 10px;
+              }
+            }
+            .handle_sell{
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              background: #00C087;
+              border-radius: 4px;
+              font-size: 16px;
+              color: #fff;
+              margin-top: 8px;
+              cursor: pointer;
+              &:hover{
+                background: rgba(0,192,135,0.7);
+              }
+            }
+            .handle_out{
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              background: #E76D42;
+              border-radius: 4px;
+              font-size: 16px;
+              color: #fff;
+              margin-top: 8px;
+              cursor: pointer;
+              &:hover{
+                background: rgba(231,109,66,0.7);
+              }
+            }
+          }
+          .only_buy{
+            padding-left: 15px;
+            padding-right: 0;
+            border-right: none;
+            .ant-slider-track{
+              background: #E76D42;
+            }
+            .ant-slider-handle{
+              border: solid 2px #E76D42;
+            }
+            .ant-slider-dot-active{
+              border-color: #E76D42;
+            }
+          }
+        }
+
+      }
+      .right_content{
+        flex: 1;
+        min-width: 300px;
+        margin-left: 10px;
+        height: 760px;
+        background: #fff;
+        margin-top: 10px;
+        .header{
+          padding: 0 20px 0 10px;
+          height: 49px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .ant-select{
+            font-size: 12px;
+            .ant-select-selection{
+              border: none;
+            }
+          }
+          .deep_come{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+        }
+        .table_th{
+          height: 30px;
+          display: flex;
+          align-items: center;
+          background: #f9f9f9;
+          div{
+            width: calc(100% /3);
+            line-height: 30px;
+            text-align: center;
+            color: #192330;
+            font-weight: 500;
+          }
+        }
+        .table_content{
+          height: 30px;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #F5F5F6;
+          div{
+            width: calc(100% /3);
+            line-height: 29px;
+            text-align: center;
+            color: #6f6f6f;
+            cursor: pointer;
+            margin-top: 1px;
+          }
+        }
+      }
+      .curr_list{
+        flex: 1;
+        margin-top: 10px;
+        background: #fff;
+      }
+      .history_list{
+        flex: 1;
+        margin-top: 10px;
+        background: #fff;
+      }
+      .entrust{
+        .header{
+          padding: 0 20px 0 10px;
+          height: 50px;
+          font-size: 16px;
+          color: #27313e;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .header_left{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+          .repeal{
+            margin-left: 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            text-align: center;
+            width: 65px;
+            height: 24px;
+            line-height: 24px;
+            color: #9DA5B2;
+            border: 1px solid #9DA5B2;
+            cursor: pointer;
+            box-sizing: content-box;
+          }
+          .header_right{
+            cursor: pointer;
+            font-size: 14px;
+            color: #27313e;
+          }
+        }
+        .table_th{
+          height: 35px;
+          background-color: #f9f9f9;
+          font-size: 12px;
+          font-weight: 500;
+          color: #27313e;
+          display: flex;
+          >div{
+            line-height: 35px;
+            text-align: center;
+          }
+          .th1{ width: 18%; }
+          .th2{ width: 5%; }
+          .th3{ flex: 1; }
+          .th4{ flex: 1; }
+          .th5{ flex: 1; }
+          .th6{ flex: 1; }
+          .th7{ flex: 1; }
+          .th8{ flex: 1; }
+        }
+        .empty_table{
+          height: 140px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .empty_img{
+            width: 57px;
+            height: 57px;
+          }
+        }
+      }
+    }
+  }
+}

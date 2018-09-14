@@ -1,0 +1,59 @@
+#Mortgage{
+  .Mortgage{
+    background: #fff;
+    height: 78px;
+    line-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    .asset-total-item{
+      font-size: 20px;
+      position: relative;
+      color: #091A26;
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
+
+    }
+  }
+  .table_content{
+    background-color: #fff;
+    padding: 0 24px 24px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    .tb_content{
+      background: #F5F5F6;
+      padding-bottom: 10px;
+    }
+    .mor_table_head, .mor_table_tb{
+      height: 50px;
+      background: #f5f5f6;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      >div{
+        flex: 1;
+        color: #646C7B;
+      }
+      >div:first-child{
+        flex: 2;
+        color: #343A45;
+        padding-left: 30px;
+      }
+      >div:last-child{
+        span{
+          color: #1890FF;
+          cursor: pointer;
+        }
+      }
+    }
+    .mor_table_tb{
+      height: 40px;
+      background: #fff;
+      border-top: 1px solid #f5f5f6;
+    }
+  }
+}

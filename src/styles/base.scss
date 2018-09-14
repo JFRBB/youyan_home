@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* @import "./foo.scss"; */
+header,nav,aside,section,article,footer{display: block;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,"微软雅黑","WenQuanYi Micro Hei","\5B8B\4F53",sans-serif;
+    ::-webkit-scrollbar{
+        width: 6px;
+        height: 12px;
+    }
+    /*定义滚动条的轨道，内阴影及圆角*/
+    ::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+        border-radius: 10px;
+    }
+    /*定义滑块，内阴影及圆角*/
+    ::-webkit-scrollbar-thumb{
+        height: 20px;
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #eaeced;
+    }
+}
+
+// *:focus { outline: none; }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input::-webkit-input-safebox-button {display: none;}
+input{-moz-appearance:textfield !important;}
+input:focus{
+  border: 1px solid #13b5b1 !important;
+}
+// input::-webkit-input-placeholder{ color: #dadbd9; }
+// input::-moz-input-placeholder{ color: #dadbd9; }
+// input::-ms-input-placeholder{ color: #dadbd9; }
+textarea::-webkit-input-placeholder{ color: #dadbd9; }
+textarea::-moz-input-placeholder{ color: #dadbd9; }
+textarea::-ms-input-placeholder{ color: #dadbd9; }
+
+html,body{
+  // height: 100%;
+  width: 100%;
+  min-width: 1280px;
+  font-size:16px;
+  color: #333;
+  overflow-x: hidden;
+}
+div#app{
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* ul,ol,dl{
+  list-style:none;
+}
+li{text-align: center;}
+li.first{
+  border-left: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+li.last{
+  border-right: none !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+} */
+body a, body a:link, body a:visited, body a:hover, body a:active, {
+  text-decoration: none;
+  color: inherit;
+}
+input{
+  outline: none;
+  font-size: 16px;
+  vertical-align:middle;
+  width: calc(100% - 10px);
+  height: 100%;
+}
+input::-webkit-input-placeholder{
+  color: #999;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+button{
+  font-size:16px;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+button:active {
+  opacity: 0.8;
+}
+
+
+.row{
+    margin: 0 -10px;
+}
+.row:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col-1,.col-2,.col-3,.col-4,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+    float: left;
+}
+.col-1{
+
+    width:  8.33333333%;
+}
+.col-2{
+   width:  16.66666666%;
+}
+.col-3{
+    width:  25%;
+}
+.col-4{
+   width:  33.33333333%;
+}
+.col-5{
+   width:  41.66666666%;
+}
+.col-6{
+   width:  50%;
+}
+.col-7{
+   width:  58.33333333%;
+}
+.col-8{
+   width:  66.66666666%;
+}
+.col-9{
+   width:  75%;
+}
+.col-10{
+   width:  83.33333333%;
+}
+.col-11{
+   width:  91.66666666%;
+}
+.col-12{
+   width:  100%;
+}
+
+
+.input-control{
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding-left: 10px;
+    /* &:focus{
+        border-color: $mainColor;
+    } */
+}
+.input-error{
+    color: #ff3b30;
+}
+
+
+/* .rc-select-enabled {
+    .rc-select-selection:focus,.rc-select-selection:hover{
+        border-color: $mainColor !important;
+        box-shadow: none !important;
+    }
+} */
+
+
+div.PopupBack {
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    > div.MainWindow {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px #969696;
+        display: inline-block;
+    }
+}
+
+
+/*
+// antd样式
+body .ant-message { z-index: 99999; }
+body .ant-message-custom-content .anticon{font-size: 18px;}
+body .ant-message-custom-content span{font-size: 18px;font-family: '微软雅黑'}
+body .ant-calendar-time-picker-select:last-child {display: none;}
+body .ant-checkbox-input{background:#4588fe;}
+body .ant-checkbox-checked:after{border: 1px solid #4588fe;}
+label .ant-checkbox-checked .ant-checkbox-inner, .ant-checkbox-indeterminate span.ant-checkbox-inner{
+  background-color: #4588fe;
+  border-color: #4588fe;
+}
+label .ant-checkbox-checked.ant-checkbox-disabled .ant-checkbox-inner, .ant-checkbox-indeterminate span.ant-checkbox-inner{
+  background-color: #eee;
+  border-color: #eee;
+}
+.ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + span.ant-checkbox-inner{
+  border-color: #4588fe;
+}
+body .ant-popover{z-index: 1051;}
+body .ant-upload-list-picture-card .ant-upload-list-item-info{display: flex;}
+body .ant-modal-wrap{z-index: 2000;}
+body .ant-cascader-menus{z-index: 2001;}
+body .ant-radio-checked .ant-radio-inner{border-color: #4588fe;}
+body .ant-radio-inner:after{background:#4588fe;}
+body .ant-rate-star-half .ant-rate-star-first, .ant-rate-star-full .ant-rate-star-second{color: #f5cf49;}
+ul .ant-cascader-menu-item-expand:after{display: none;}
+body .ant-cascader-picker-arrow:before{display: none;}
+body ol, body ul, body dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+body p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+body .ant-popover-inner-content{padding: 0;}
+body .ant-switch{border-radius: 2px;}
+body .ant-switch:before, body .ant-switch:after{border-radius: 2px;}
+body .ant-collapse-content{border-top: 0 solid #d9d9d9;} */

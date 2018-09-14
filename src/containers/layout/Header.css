@@ -1,0 +1,74 @@
+#Header{
+  width: 100%;
+}
+#Header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+#Header .container > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#Header .container .header_logo {
+  width: 133px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+#Header .container .header_center {
+  width: auto;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  margin-left: 40px;
+  color: #fff;
+}
+#Header .container .active {
+  color: #13b5b1;
+  background: #121725;
+}
+#Header .container .header_notice {
+  width: auto;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  color: #fff;
+}
+#Header .container .header_money {
+  width: auto;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  color: #fff;
+}
+#Header .container .header_list {
+  width: auto;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  color: #fff;
+}
+#Header .container .header_user {
+  width: auto;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#Header .header_center:hover, #Header .header_notice:hover, #Header .header_money:hover, #Header .header_list:hover{
+  color: #13b5b1;
+  background: #121725;
+}

@@ -1,0 +1,111 @@
+#BasicInfo{
+  font-size: 12px;
+  color: #333;
+  .basic_info_header{
+    height: 78px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #e8e8e9;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .basic_header{
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  .basic_info_content{
+    background: #fff;
+    padding: 0 24px;
+    .basic_info{
+      margin-top: 10px;
+      padding-left: 15px;
+      .basic_info_item{
+        height: 36px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .label{
+          width: 120px;
+          text-align: left;
+        }
+      }
+    }
+    .ant-spin{
+      margin-left: 20px;
+    }
+  }
+  .safe_setting{
+    background: #fff;
+    padding: 0 24px;
+    .safe_set_item{
+      height: 35px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 15px;
+      margin-top: 10px;
+      .item_name{
+        width: 100px;
+      }
+      .item_status{
+        width: 145px;
+        color: #9DA5B2;
+      }
+      .item_text{
+        width: 370px;
+      }
+      .item_handle{
+        width: 128px;
+        text-align: right;
+        cursor: pointer;
+        color: #1890FF;
+      }
+    }
+  }
+  .visit_history{
+    background: #fff;
+    padding: 0 24px;
+    .visit_history_content{
+      .history_header{
+        height: 50px;
+        background: #F5F5F6;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 30px;
+        color: #343A45;
+        .table_time{
+          width: 20%;
+        }
+        .table_ip{
+          width: 30%;
+        }
+        .table_site{
+          width: 40%;
+        }
+      }
+      .history_item{
+        padding: 0 30px;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #F5F5F6;
+        &:hover{
+          background: #f2f2f2;
+        }
+        .history_time{
+          width: 20%;
+        }
+        .history_ip{
+          width: 30%;
+        }
+        .history_site{
+          width: 40%;
+        }
+      }
+    }
+  }
+}

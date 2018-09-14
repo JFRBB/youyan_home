@@ -1,0 +1,90 @@
+#IdCard{
+  font-size: 12px;
+  color: #333;
+  .idCard_container_top{
+    background: #fff;
+    padding: 0 24px;
+    border-radius: 5px;
+    .basic_info{
+      padding-left: 15px;
+      .basic_info_item{
+        height: 36px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .label{
+          width: 100px;
+          text-align: left;
+        }
+        .basic_text{
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          color: #9DA5B2;
+        }
+        .no_idcard{
+          color: #9DA5B2;
+        }
+        .handle_idCard{
+          cursor: pointer;
+          color: #1890FF;
+          margin-left: 135px;
+        }
+      }
+    }
+
+  }
+  .idCard_header{
+    height: 78px;
+    line-height: 78px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #e8e8e9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .idCard_container_bottom{
+    background: #fff;
+    padding: 24px;
+    border-radius: 5px;
+    margin-top: 25px;
+    .limit_content{
+      border-radius: 1px #e8e8e9 solid;
+      .limit_header{
+        height: 50px;
+        display: flex;
+        padding: 0 30px;
+        background: #F5F5F6;
+        color: #343A45;
+        justify-content: flex-start;
+        align-items: center;
+        div{
+          text-align: left;
+          width: 20%;
+        }
+        .number_asset{
+          text-align: left;
+        }
+      }
+      .limit_body{
+        height: 40px;
+        display: flex;
+        padding: 0 30px;
+        color: #646C7B;
+        border-bottom: 1px solid #F5F5F6;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 5px;
+        &:hover{
+          background: #ccc;
+        }
+        div{
+          width: 20%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

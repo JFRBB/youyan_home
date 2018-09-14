@@ -1,0 +1,7 @@
+.left{
+  position: relative;
+}
+.header-group-fullscreen{
+  position: absolute;
+  right: 0px;
+}
