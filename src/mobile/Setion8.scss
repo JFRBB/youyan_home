@@ -1,0 +1,79 @@
+@function pxTorem($px) {
+  @return $px / 75 * 1rem;
+}
+#Setion8{
+  width: 100%;
+  height: 100%;
+  background: url('../static/img/share/share_bg.png');
+  background-size: 100% 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title{
+    font-size: pxTorem(52);
+    font-weight: bold;
+    color: #333;
+    margin-top: pxTorem(105);
+    z-index: 2;
+  }
+  .title_bottom{
+    width: pxTorem(233);
+    height: pxTorem(23);
+    position: absolute;
+    top: pxTorem(152);
+  }
+  .message{
+    width: pxTorem(585);
+    font-size: pxTorem(30);
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: pxTorem(25) pxTorem(10);
+    margin-top: pxTorem(80);
+    background: #ffee99;
+    border-radius: pxTorem(35);
+    box-shadow: pxTorem(5) pxTorem(10) 0 #e99505;
+  }
+  .tips{
+    margin-top: pxTorem(85);
+    font-size: pxTorem(24);
+  }
+  .phone{
+    width: pxTorem(570);
+    height: pxTorem(90);
+    font-size: pxTorem(28);
+    background: #fff;
+    padding-left: pxTorem(20);
+    border-radius: pxTorem(10);
+    margin-top: pxTorem(35);
+  }
+  .address{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: pxTorem(570);
+    .address_input{
+      width: pxTorem(270);
+      height: pxTorem(90);
+      font-size: pxTorem(28);
+      background: #fff;
+      padding-left: pxTorem(20);
+      border-radius: pxTorem(10);
+      margin-top: pxTorem(35);
+    }
+  }
+  .submit{
+    width: pxTorem(570);
+    height: pxTorem(90);
+    line-height: pxTorem(90);
+    text-align: center;
+    font-size: pxTorem(33);
+    color: #fff;
+    letter-spacing: pxTorem(10);
+    background: #b57405;
+    margin-top: pxTorem(35);
+    border-radius: pxTorem(10);
+  }
+}

@@ -6,16 +6,20 @@
   height: 100%;
   background: url('../static/img/share/share_bg.png');
   background-size: 100% 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img{
-    position: absolute;
-  }
-  >div{
-    position: absolute;
+  .containers{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    >img{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    >div{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .title{
     font-size: pxTorem(52);
@@ -39,5 +43,32 @@
     background: #ffee99;
     border-radius: pxTorem(35);
     box-shadow: pxTorem(5) pxTorem(10) 0 #e99505;
+  }
+  .item_box{
+    .itemName{
+      font-size: pxTorem(63);
+      color: #333;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .split{
+        margin-top: pxTorem(20);
+        width: pxTorem(88);
+        height: pxTorem(10);
+        background: #b57405;
+      }
+    }
+    .item_message{
+      font-size: pxTorem(28);
+      color: #333;
+      margin-top: pxTorem(35);
+    }
+  }
+  .item1{
+    top: pxTorem(540);
+  }
+  .item2{
+    top: pxTorem(858);
   }
 }
