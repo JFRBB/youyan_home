@@ -1,0 +1,8 @@
+@function pxTorem($px) {
+  @return $px / 75 * 1rem;
+}
+.arrows{
+  width: pxTorem(80);
+  height: pxTorem(46);
+  bottom: pxTorem(65);
+}

@@ -1,0 +1,34 @@
+#Home{
+  #mobPreLogin_Letter{
+    * {
+      touch-action: none;
+    }
+    width: 100%;
+    height: 100%;
+    .scrollView{
+      touch-action: none;
+    }
+    .slider {
+      .slider-decorator-0{
+        display: none;
+      }
+      .slider-decorator-1{
+        display: none;
+      }
+      .slider-decorator-2{
+        display: none;
+      }
+    }
+    // #Com-Letter1, #Com-Letter2, #Com-Letter3, #Com-Letter4, #Com-Letter5, #Com-Letter7, #MobRegPage2, #MobRegHomePage {
+    //   background: linear-gradient(#65c3ff, #128bf2);
+    // }
+  }
+}
+
+@media screen and (min-width: 768px){
+  #Home{
+    width: 414px;
+    height: 736px;
+    margin: auto auto;
+  }
+}

@@ -13,7 +13,28 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/logo.ico" type="image/gif">
+    <script>
+     // 适配移动端
+      (function (doc, win) {
+        var docEl = doc.documentElement,//根元素html
+        //判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+          recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          if (clientWidth>768) {
+          clientWidth = 414;
+          }
+            //把document的fontSize大小设置成跟窗口成一定比例的大小，从而实现响应式效果。
+            docEl.style.fontSize = (clientWidth / 10) + 'px';
+          };
+          //alert(docEl)
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);//addEventListener事件方法接受三个参数：第一个是事件名称比如点击事件onclick，第二个是要执行的函数，第三个是布尔值
+        doc.addEventListener('DOMContentLoaded', recalc, false)//绑定浏览器缩放与加载时间
+      })(document, window);
 
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,6 +45,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1"/>
+
     <!-- <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1"/> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
     <title>TokenEX</title>

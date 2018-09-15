@@ -2,11 +2,11 @@ import React from 'react';
 import {render} from 'react-dom';
 import { LocaleProvider } from 'antd';
 import { Provider } from 'react-redux';
-import { HashRouter, Switch, BrowserRouter } from 'react-router-dom';
+import { HashRouter, Switch, BrowserRouter,Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/store';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
-import Routes from './routes';
+import Share from './mobile/Home';
 const store = configureStore();
 
 if (!!window.ActiveXObject || "ActiveXObject" in window){
@@ -19,7 +19,7 @@ if (!!window.ActiveXObject || "ActiveXObject" in window){
           <LocaleProvider locale={zh_CN}>
             <HashRouter>
               <Switch>
-                <Routes {...this.props}/>
+                <Route path='/' component={Share}/>
               </Switch>
             </HashRouter>
           </LocaleProvider>
@@ -34,7 +34,7 @@ render(
     <LocaleProvider locale={zh_CN}>
       <HashRouter>
         <Switch>
-          <Routes {...this.props}/>
+          <Route path='/' component={Share}/>
         </Switch>
       </HashRouter>
     </LocaleProvider>
