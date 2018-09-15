@@ -6,7 +6,8 @@ import Carousel from 'nuka-carousel';
 import Setion1 from './Setion1';
 import Setion2 from './Setion2';
 import Setion3 from './Setion3';
-
+import Setion4 from './Setion4';
+import Setion5 from './Setion5';
 
 class Home extends React.Component {
   constructor(props) {
@@ -33,6 +34,8 @@ class Home extends React.Component {
       <Setion1 show={slideIndex==0}/>,
       <Setion2 show={slideIndex==1}/>,
       <Setion3 show={slideIndex==2}/>,
+      <Setion4 show={slideIndex==3}/>,
+      <Setion5 show={slideIndex==4}/>,
     ];
     let ComContent = content.map((item, index)=>{
       return (
