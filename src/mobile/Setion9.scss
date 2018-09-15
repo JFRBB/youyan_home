@@ -1,0 +1,68 @@
+@function pxTorem($px) {
+  @return $px / 75 * 1rem;
+}
+#Setion9{
+  width: 100%;
+  height: 100%;
+  background: url('../static/img/share/share_bg.png');
+  background-size: 100% 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .message{
+    width: pxTorem(585);
+    height: pxTorem(410);
+    font-size: pxTorem(30);
+    color: #333;
+    margin-top: pxTorem(190);
+    background: #ffee99;
+    border-radius: pxTorem(35);
+    box-shadow: pxTorem(5) pxTorem(10) 0 #e99505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .success{
+      width: pxTorem(130);
+      height: pxTorem(130);
+    }
+    .tips{
+      font-size: pxTorem(52);
+      color: #333;
+      margin-top: pxTorem(30);
+      font-weight: bold;
+    }
+    .text{
+      font-size: pxTorem(24);
+      margin-top: pxTorem(25);
+      color: #333;
+    }
+  }
+  .adv_phone{
+    width: pxTorem(590);
+    height: pxTorem(129);
+    margin-top: pxTorem(80);
+    background: #b57405;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: pxTorem(20);
+    color: #fff;
+    .title{
+      font-size: pxTorem(30);
+      font-weight: bold;
+    }
+    .phone{
+      font-size: pxTorem(26);
+      margin-top: pxTorem(10);
+    }
+  }
+  .logo{
+    width: pxTorem(320);
+    height: pxTorem(95);
+    margin-top: pxTorem(260);
+  }
+}

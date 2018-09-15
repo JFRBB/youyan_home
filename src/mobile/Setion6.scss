@@ -1,0 +1,99 @@
+@function pxTorem($px) {
+  @return $px / 75 * 1rem;
+}
+#Setion6{
+  width: 100%;
+  height: 100%;
+  background: url('../static/img/share/share_bg.png');
+  background-size: 100% 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    position: absolute;
+  }
+  >div{
+    position: absolute;
+  }
+  .title{
+    font-size: pxTorem(52);
+    font-weight: bold;
+    color: #333;
+    top: pxTorem(175);
+    z-index: 2;
+  }
+  .title_bottom{
+    width: pxTorem(233);
+    height: pxTorem(23);
+    top: pxTorem(222);
+  }
+  .sub_title, .sub_title2{
+    font-size: pxTorem(35);
+    font-weight: bold;
+    color: #333;
+    background: #ffee99;
+    width: pxTorem(200);
+    height: pxTorem(66);
+    line-height: pxTorem(66);
+    text-align: center;
+  }
+  .sub_title{
+    top: pxTorem(310);
+  }
+  .message1{
+    font-size: pxTorem(30);
+    color: #333;
+    top: pxTorem(400);
+  }
+  .sub_title2{
+    top: pxTorem(520);
+  }
+  .message2{
+    top: pxTorem(610);
+    display: flex;
+    flex-direction: column;
+    .money{
+      font-size: pxTorem(49);
+      color: #fe3636;
+      text-shadow: pxTorem(4) pxTorem(4) 0 #e4ad00;
+    }
+    .money_text{
+      font-size: pxTorem(26);
+      margin-top: pxTorem(15);
+    }
+  }
+  .map{
+    width: pxTorem(465);
+    height: pxTorem(540);
+    bottom: pxTorem(50);
+    left: 0;
+  }
+  .tips1{
+    width: pxTorem(230);
+    padding: pxTorem(15) 0;
+    text-align: center;
+    background: #ffee99;
+    font-size: pxTorem(27);
+    color: #333;
+    bottom: pxTorem(350);
+    right: pxTorem(53);
+    span{
+      color: #ff2929;
+    }
+  }
+  .tips2{
+    width: pxTorem(270);
+    padding: pxTorem(15) 0;
+    text-align: center;
+    background: #ffee99;
+    font-size: pxTorem(33);
+    color: #333;
+    bottom: pxTorem(185);
+    right: pxTorem(59);
+    span{
+      color: #ff2929;
+    }
+  }
+}

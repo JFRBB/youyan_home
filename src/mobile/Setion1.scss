@@ -6,21 +6,26 @@
   height: 100%;
   background: url('../static/img/share/share_bg.png');
   background-size: 100% 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img{
-    position: absolute;
+  .containers{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    div{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
-  >div{
-    position: absolute;
-  }
+
   .home_title{
     width: pxTorem(640);
     height: pxTorem(103);
-    top: pxTorem(260);
+    top: pxTorem(195);
   }
   .home_coin{
     width: 100%;
@@ -29,44 +34,51 @@
   .home_box{
     width: pxTorem(458);
     height: pxTorem(485);
-    top: pxTorem(124);
+    top: pxTorem(54);
   }
   .home_logo{
     width: pxTorem(180);
     height: pxTorem(180);
-    bottom: pxTorem(360);
+    top: pxTorem(730);
   }
-
+  .home_text{
+    width: pxTorem(450);
+    height: pxTorem(162);
+    top: pxTorem(935);
+  }
   .title1,.title2{
     font-size: pxTorem(36);
     color: #333;
     font-weight: bold;
   }
   .title1{
-    top: pxTorem(160);
+    top: pxTorem(90);
   }
   .title2{
-    top: pxTorem(210);
+    top: pxTorem(140);
   }
   .title3{
     font-size: pxTorem(30);
     color: #303031;
-    top: pxTorem(403);
+    top: pxTorem(333);
   }
   .title4{
     font-size: pxTorem(47);
     color: #303031;
-    top: pxTorem(453);
+    top: pxTorem(383);
   }
   .title5{
     font-size: pxTorem(40);
     color: #303031;
-    top: pxTorem(514);
+    top: pxTorem(444);
   }
   .sub_title{
+    width: pxTorem(570);
     font-size: pxTorem(28);
     color: #cc7313;
     letter-spacing: pxTorem(5);
-    top: pxTorem(640);
+    top: pxTorem(570);
   }
+
+
 }
