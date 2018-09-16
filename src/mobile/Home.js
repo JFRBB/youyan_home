@@ -15,11 +15,17 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex:0,
+      slideIndex:'',
     }
   }
   componentWillMount(){
     this.letterHeight = document.body.clientHeight;
+  }
+
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({slideIndex:0})
+    },1)
   }
 
   settings = () => ({
@@ -33,12 +39,12 @@ class Home extends React.Component {
   carousel = () =>{
     const {slideIndex} = this.state;
     const content = [
-      <Setion1 show={slideIndex==0}/>,
-      <Setion2 show={slideIndex==1}/>,
-      <Setion3 show={slideIndex==2}/>,
-      <Setion6 show={slideIndex==4}/>,
-      <Setion8 show={slideIndex==7}/>,
-      <Setion9 show={slideIndex==8}/>,
+      <Setion6 show={slideIndex===0}/>,
+      <Setion1 show={slideIndex===1}/>,
+      <Setion2 show={slideIndex===2}/>,
+      <Setion3 show={slideIndex===3}/>,
+      <Setion8 show={slideIndex===7}/>,
+      <Setion9 show={slideIndex===8}/>,
     ];
     let ComContent = content.map((item, index)=>{
       return (

@@ -20,7 +20,7 @@ class Setion1 extends React.Component {
 
     return (
       <div id="Setion1">
-        <div className="containers" style={this.props.show?{display:'block'}:{display:'none'}}>
+        <div className="containers" style={this.props.show?{display:'flex'}:{display:'none'}}>
           <img className="home_title" src={require('../static/img/share/home_title.png')} />
           <img className="home_coin" src={require('../static/img/share/coin.png')} />
           <img className="home_box" src={require('../static/img/share/home_box.png')} />

@@ -21,7 +21,7 @@ class Setion2 extends React.Component {
 
     return (
       <div id="Setion2">
-        <div className="containers" style={this.props.show?{display:'block'}:{display:'none'}}>
+        <div className="containers" style={this.props.show?{display:'flex'}:{display:'none'}}>
           <div className="title">我们在解决什么难题?</div>
           <img className="title_bottom" src={require('../static/img/share/title_bottom.png')} />
           <div className="message">&nbsp;&nbsp;&nbsp;契约精神缺乏，诚信不足<br/>契约精神缺失，从而导致种种<br/>社会问题，严重影响社会生活</div>

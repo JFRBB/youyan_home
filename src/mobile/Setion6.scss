@@ -6,28 +6,39 @@
   height: 100%;
   background: url('../static/img/share/share_bg.png');
   background-size: 100% 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img{
-    position: absolute;
-  }
-  >div{
-    position: absolute;
+  .containers{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    >img,>div{
+      position: absolute;
+    }
   }
   .title{
     font-size: pxTorem(52);
     font-weight: bold;
     color: #333;
-    top: pxTorem(175);
+    top: pxTorem(-100);
     z-index: 2;
+    animation: title 0.3s linear 0.2s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title {
+    70% { top: pxTorem(135);}
+    100% { top: pxTorem(105);}
   }
   .title_bottom{
     width: pxTorem(233);
     height: pxTorem(23);
-    top: pxTorem(222);
+    top: pxTorem(-100);
+    animation: title_bottom 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title_bottom {
+    100% { top: pxTorem(152);}
   }
   .sub_title, .sub_title2{
     font-size: pxTorem(35);
@@ -40,26 +51,53 @@
     text-align: center;
   }
   .sub_title{
-    top: pxTorem(310);
+    top: pxTorem(240);
+    left: pxTorem(-750);
+    animation: sub_title 0.5s linear 0.4s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes sub_title {
+    0% {left: pxTorem(-750);}
+    70% {left: 50%;transform: translateX(-35%);}
+    100% {left: 50%;transform: translateX(-50%);}
   }
   .message1{
+    width: 100%;
+    text-align: center;
     font-size: pxTorem(30);
     color: #333;
-    top: pxTorem(400);
+    top: pxTorem(330);
+    left: pxTorem(-750);
+    animation: sub_title 0.5s linear 0.6s;
+    animation-fill-mode: forwards;
   }
   .sub_title2{
-    top: pxTorem(520);
+    top: pxTorem(450);
+    right: pxTorem(-750);
+    animation: sub_title2 0.5s linear 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes sub_title2 {
+    0% {right: pxTorem(-750);}
+    70% {right: 50%;transform: translateX(35%);}
+    100% {right: 50%;transform: translateX(50%);}
   }
   .message2{
-    top: pxTorem(610);
+    width: 100%;
+    top: pxTorem(540);
     display: flex;
     flex-direction: column;
+    right: pxTorem(-750);
+    animation: sub_title2 0.5s linear 1.2s;
+    animation-fill-mode: forwards;
     .money{
       font-size: pxTorem(49);
+      text-align: center;
       color: #fe3636;
       text-shadow: pxTorem(4) pxTorem(4) 0 #e4ad00;
     }
     .money_text{
+      text-align: center;
       font-size: pxTorem(26);
       margin-top: pxTorem(15);
     }
@@ -79,9 +117,15 @@
     color: #333;
     bottom: pxTorem(350);
     right: pxTorem(53);
+    opacity: 0;
+    animation: tips 1s linear;
+    animation-fill-mode: forwards;
     span{
       color: #ff2929;
     }
+  }
+  @keyframes tips {
+    100% {opacity: 1;}
   }
   .tips2{
     width: pxTorem(270);
@@ -92,8 +136,69 @@
     color: #333;
     bottom: pxTorem(185);
     right: pxTorem(59);
+    opacity: 0;
+    animation: tips 1s linear;
+    animation-fill-mode: forwards;
     span{
       color: #ff2929;
     }
+  }
+  .beijing,.shanghai,.xiamen,.guangzhou{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: pxTorem(333);
+    left: pxTorem(265);
+    font-size: pxTorem(24);
+    color: #323232;
+    .progress{
+      width: pxTorem(25);
+      height: pxTorem(70);
+      border: pxTorem(1) solid #000;
+      border-radius: pxTorem(25);
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      .color{
+        width: pxTorem(23);
+        // margin-bottom: pxTorem(1);
+        border-radius: pxTorem(25);
+        background: #fe3636;
+        animation: color 1.5s linear infinite;
+      }
+    }
+  }
+  .shanghai{
+    bottom: pxTorem(223);
+    left: pxTorem(345);
+    .progress{
+      .color{
+        animation: color 1.5s linear 0.2s infinite;
+      }
+    }
+  }
+  .xiamen{
+    bottom: pxTorem(122);
+    left: pxTorem(310);
+    .progress{
+      .color{
+        animation: color 1.4s linear 0.1s infinite;
+      }
+    }
+  }
+  .guangzhou{
+    bottom: pxTorem(102);
+    left: pxTorem(252);
+    .progress{
+      .color{
+        animation: color 1.7s linear 0.4s infinite;
+      }
+    }
+  }
+  @keyframes color {
+    0% { height: pxTorem(0);}
+    100% { height: pxTorem(70);}
   }
 }
