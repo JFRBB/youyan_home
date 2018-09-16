@@ -42,15 +42,15 @@ class Home extends React.Component {
   carousel = () =>{
     const {slideIndex} = this.state;
     const content = [
-      <Setion1 show={slideIndex==0}/>,
-      <Setion2 show={slideIndex==1}/>,
-      <Setion3 show={slideIndex==2}/>,
-      <Setion4 show={slideIndex==3}/>,
-      <Setion5 show={slideIndex==4}/>,
-      <Setion6 show={slideIndex==5}/>,
-      <Setion7 show={slideIndex==6}/>,
-      <Setion8 show={slideIndex==7}/>,
-      <Setion9 show={slideIndex==8}/>,
+      <Setion1 show={slideIndex===0}/>,
+      <Setion2 show={slideIndex===1}/>,
+      <Setion3 show={slideIndex===2}/>,
+      <Setion4 show={slideIndex===3}/>,
+      <Setion5 show={slideIndex===4}/>,
+      <Setion6 show={slideIndex===5}/>,
+      <Setion7 show={slideIndex===6}/>,
+      <Setion8 show={slideIndex===7}/>,
+      <Setion9 show={slideIndex===8}/>,
     ];
     let ComContent = content.map((item, index)=>{
       return (

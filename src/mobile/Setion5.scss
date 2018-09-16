@@ -6,28 +6,44 @@
   height: 100%;
   background: url('../static/img/share/share_bg.png');
   background-size: 100% 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img{
-    position: absolute;
-  }
-  >div{
-    position: absolute;
+  .containers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    img{
+      position: absolute;
+    }
+    >div{
+      position: absolute;
+    }
   }
   .title{
     font-size: pxTorem(52);
     font-weight: bold;
     color: #333;
-    top: pxTorem(105);
+    top: pxTorem(-100);
     z-index: 2;
+    animation: title 0.3s linear 0.2s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title {
+    70% { top: pxTorem(135);}
+    100% { top: pxTorem(105);}
+  }
+  @keyframes title_bottom {
+    100% { top: pxTorem(152);}
   }
   .title_bottom{
     width: pxTorem(233);
     height: pxTorem(23);
-    top: pxTorem(150);
+    top: pxTorem(-100);
+    animation: title_bottom 0.2s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title_bottom {
+    100% { top: pxTorem(152);}
   }
   .message {
     top: pxTorem(255);
@@ -52,5 +68,75 @@
     position: absolute;
     margin: pxTorem(-25) pxTorem(-60);
     color: #b57405;
+  }
+  .message .list1{
+    opacity: 0;
+    animation: list1 0.5s ease-in-out 1s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes list1 {
+    0% {transform: scale(1);opacity:0;}
+    50% {transform: scale(0.9);opacity:0.6;}
+    100% { transform: scale(1);opacity:1;}
+  }
+  .message .list2{
+    opacity: 0;
+    animation: list1 0.5s ease-in-out 1.5s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes list2 {
+    0% {transform: scale(1);opacity:0;}
+    50% {transform: scale(0.9);opacity:0.6;}
+    100% { transform: scale(1);opacity:1;}
+  }
+  .message .list3{
+    opacity: 0;
+    animation: list1 0.5s ease-in-out 2s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes list3 {
+    0% {transform: scale(1);opacity:0;}
+    50% {transform: scale(0.9);opacity:0.6;}
+    100% { transform: scale(1);opacity:1;}
+  }
+  .message .list4{
+    opacity: 0;
+    animation: list1 0.5s ease-in-out 2.5s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes list4 {
+    0% {transform: scale(1);opacity:0;}
+    50% {transform: scale(0.9);opacity:0.6;}
+    100% { transform: scale(1);opacity:1;}
+  }
+  .message .list5{
+    opacity: 0;
+    animation: list1 0.5s ease-in-out 3s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes list5 {
+    0% {transform: scale(1);opacity:0;}
+    50% {transform: scale(0.9);opacity:0.6;}
+    100% { transform: scale(1);opacity:1;}
+  }
+  .message .list6{
+    opacity: 0;
+    animation: list1 0.5s ease-in-out 3.5s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes list6 {
+    0% {transform: scale(1);opacity:0;}
+    50% {transform: scale(0.9);opacity:0.6;}
+    100% { transform: scale(1);opacity:1;}
+  }
+  .message .list7{
+    opacity: 0;
+    animation: list1 0.5s ease-in-out 4s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes list7 {
+    0% {transform: scale(1);opacity:0;}
+    50% {transform: scale(0.9);opacity:0.6;}
+    100% { transform: scale(1);opacity:1;}
   }
 }
