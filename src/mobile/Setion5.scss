@@ -1,0 +1,56 @@
+@function pxTorem($px) {
+  @return $px / 75 * 1rem;
+}
+#Setion5{
+  width: 100%;
+  height: 100%;
+  background: url('../static/img/share/share_bg.png');
+  background-size: 100% 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    position: absolute;
+  }
+  >div{
+    position: absolute;
+  }
+  .title{
+    font-size: pxTorem(52);
+    font-weight: bold;
+    color: #333;
+    top: pxTorem(105);
+    z-index: 2;
+  }
+  .title_bottom{
+    width: pxTorem(233);
+    height: pxTorem(23);
+    top: pxTorem(150);
+  }
+  .message {
+    top: pxTorem(255);
+  }
+  .message ul {
+    list-style: none;
+    text-align: left;
+    line-height: pxTorem(64);
+    font-size: pxTorem(30);
+    font-weight: bold;
+    color: #333;
+  }
+  .message li {
+    width: pxTorem(565);
+    height: pxTorem(64);
+    background-color: #ffee99;
+    margin-bottom: pxTorem(50);
+    padding-left: pxTorem(95);
+  }
+  .message .number {
+    font-size: pxTorem(70);
+    position: absolute;
+    margin: pxTorem(-25) pxTorem(-60);
+    color: #b57405;
+  }
+}
