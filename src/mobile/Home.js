@@ -9,6 +9,7 @@ import Setion3 from './Setion3';
 import Setion4 from './Setion4';
 import Setion5 from './Setion5';
 import Setion6 from './Setion6';
+import Setion7 from './Setion7';
 import Setion8 from './Setion8';
 import Setion9 from './Setion9';
 
@@ -41,6 +42,7 @@ class Home extends React.Component {
       <Setion4 show={slideIndex==3}/>,
       <Setion5 show={slideIndex==4}/>,
       <Setion6 show={slideIndex==5}/>,
+      <Setion7 show={slideIndex==6}/>,
       <Setion8 show={slideIndex==7}/>,
       <Setion9 show={slideIndex==8}/>,
     ];
