@@ -10,15 +10,14 @@
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img{
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
     }
     div{
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
 
@@ -26,10 +25,25 @@
     width: pxTorem(640);
     height: pxTorem(103);
     top: pxTorem(195);
+    transform: scale(3);
+    animation: home_title 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes home_title {
+    0% {transform: scale(3);}
+    70% {transform: scale(0.8);}
+    100% { transform: scale(1);}
   }
   .home_coin{
     width: 100%;
     height: 100%;
+    transform: scale(2);
+    animation: home_coin 0.2s linear 0.3s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes home_coin {
+    0% {transform: scale(2);}
+    100% { transform: scale(1);}
   }
   .home_box{
     width: pxTorem(458);
@@ -40,11 +54,25 @@
     width: pxTorem(180);
     height: pxTorem(180);
     top: pxTorem(730);
+    transform: scale(0);
+    animation: home_logo 0.6s linear 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes home_logo {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
   }
   .home_text{
     width: pxTorem(450);
     height: pxTorem(162);
     top: pxTorem(935);
+    opacity: 0;
+    animation: home_text 0.1s linear 1.6s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes home_text {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
   .title1,.title2{
     font-size: pxTorem(36);
@@ -52,33 +80,66 @@
     font-weight: bold;
   }
   .title1{
-    top: pxTorem(90);
+    top: pxTorem(-100);
+    animation: title1 0.2s linear 0.4s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title1 {
+    100% { top: pxTorem(90);}
   }
   .title2{
-    top: pxTorem(140);
+    top: pxTorem(-100);
+    animation: title2 0.2s linear 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title2 {
+    100% { top: pxTorem(140);}
   }
   .title3{
     font-size: pxTorem(30);
     color: #303031;
-    top: pxTorem(333);
+    top: pxTorem(-100);
+    animation: title3 0.3s linear 0.6s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title3 {
+    0% {top: pxTorem(-100);}
+    100% { top: pxTorem(333);}
   }
   .title4{
     font-size: pxTorem(47);
     color: #303031;
-    top: pxTorem(383);
+    top: pxTorem(-100);
+    animation: title4 0.3s linear 0.7s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title4 {
+    0% {top: pxTorem(-100);}
+    100% { top: pxTorem(383);}
   }
   .title5{
     font-size: pxTorem(40);
     color: #303031;
-    top: pxTorem(444);
+    top: pxTorem(-100);
+    animation: title5 0.3s linear 0.8s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title5 {
+    0% {top: pxTorem(-100);}
+    100% { top: pxTorem(444);}
   }
   .sub_title{
-    width: pxTorem(570);
     font-size: pxTorem(28);
     color: #cc7313;
     letter-spacing: pxTorem(5);
     top: pxTorem(570);
+    opacity: 0;
+    animation: sub_title 0.5s linear 0.9s;
+    animation-fill-mode: forwards;
   }
-
+  @keyframes sub_title {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
 
 }

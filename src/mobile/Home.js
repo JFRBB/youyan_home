@@ -18,11 +18,17 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex:0,
+      slideIndex:'',
     }
   }
   componentWillMount(){
     this.letterHeight = document.body.clientHeight;
+  }
+
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({slideIndex:0})
+    },1)
   }
 
   settings = () => ({
