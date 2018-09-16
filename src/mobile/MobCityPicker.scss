@@ -1,0 +1,43 @@
+
+.cityPicker{
+	width: 106px;
+	outline: none;
+	margin-right: 5px;
+	&:last-child{
+		margin-right: 0;
+	}
+	input:focus{
+		border:none!important;
+	}
+	.rc-select-enabled .rc-select-selection:active{
+		border-color:#4588fe!important;
+	}
+	.rc-select-selection--single{
+		height: 36px;
+		line-height: 36px;
+		border-radius: 2px;
+		.rc-select-selection__rendered{
+			height: 36px;
+			line-height: 36px;
+		}
+		.rc-select-arrow{
+			height: 36px;
+			line-height: 36px;
+		}
+		.rc-select-selection-selected-value{
+			right:20px;
+			overflow: hidden;
+		}
+	}
+	.rc-select-selection__placeholder{
+		right: 20px;
+	}
+}
+.cityDropdown{
+	z-index: 99999999;
+	max-height: 300px;
+	overflow-y: scroll;
+}
+li.rc-select-dropdown-menu-item-active{
+	background-color: #4588fe;
+}

@@ -118,7 +118,7 @@
     bottom: pxTorem(350);
     right: pxTorem(53);
     opacity: 0;
-    animation: tips 1s linear;
+    animation: tips 1s linear 2.8s;
     animation-fill-mode: forwards;
     span{
       color: #ff2929;
@@ -137,7 +137,7 @@
     bottom: pxTorem(185);
     right: pxTorem(59);
     opacity: 0;
-    animation: tips 1s linear;
+    animation: tips 1s linear 3s;
     animation-fill-mode: forwards;
     span{
       color: #ff2929;
@@ -170,9 +170,17 @@
       }
     }
   }
+  .beijing{
+    opacity: 0;
+    animation: tips 1s linear 1.7s;
+    animation-fill-mode: forwards;
+  }
   .shanghai{
     bottom: pxTorem(223);
     left: pxTorem(345);
+    opacity: 0;
+    animation: tips 1s linear 2s;
+    animation-fill-mode: forwards;
     .progress{
       .color{
         animation: color 1.5s linear 0.2s infinite;
@@ -182,6 +190,9 @@
   .xiamen{
     bottom: pxTorem(122);
     left: pxTorem(310);
+    opacity: 0;
+    animation: tips 1s linear 2.3s;
+    animation-fill-mode: forwards;
     .progress{
       .color{
         animation: color 1.4s linear 0.1s infinite;
@@ -191,6 +202,9 @@
   .guangzhou{
     bottom: pxTorem(102);
     left: pxTorem(252);
+    opacity: 0;
+    animation: tips 1s linear 2.6s;
+    animation-fill-mode: forwards;
     .progress{
       .color{
         animation: color 1.7s linear 0.4s infinite;

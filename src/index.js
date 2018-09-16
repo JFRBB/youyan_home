@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/store';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import Share from './mobile/Home';
+import Success from './mobile/Success';
 const store = configureStore();
 
 if (!!window.ActiveXObject || "ActiveXObject" in window){
@@ -19,7 +20,8 @@ if (!!window.ActiveXObject || "ActiveXObject" in window){
           <LocaleProvider locale={zh_CN}>
             <HashRouter>
               <Switch>
-                <Route path='/' component={Share}/>
+                <Route exact path='/' component={Share}/>
+                <Route exact path='/success' component={Success}/>
               </Switch>
             </HashRouter>
           </LocaleProvider>
@@ -34,7 +36,8 @@ render(
     <LocaleProvider locale={zh_CN}>
       <HashRouter>
         <Switch>
-          <Route path='/' component={Share}/>
+          <Route exact path='/' component={Share}/>
+          <Route exact path='/success' component={Success}/>
         </Switch>
       </HashRouter>
     </LocaleProvider>
