@@ -6,28 +6,44 @@
   height: 100%;
   background: url('../static/img/share/share_bg.png');
   background-size: 100% 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img{
-    position: absolute;
-  }
-  >div{
-    position: absolute;
+  .containers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    img{
+      position: absolute;
+    }
+    >div{
+      position: absolute;
+    }
   }
   .title{
     font-size: pxTorem(52);
     font-weight: bold;
     color: #333;
-    top: pxTorem(105);
+    top: pxTorem(-100);
     z-index: 2;
+    animation: title 0.3s linear 0.2s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title {
+    70% { top: pxTorem(135);}
+    100% { top: pxTorem(105);}
+  }
+  @keyframes title_bottom {
+    100% { top: pxTorem(152);}
   }
   .title_bottom{
     width: pxTorem(233);
     height: pxTorem(23);
-    top: pxTorem(150);
+    top: pxTorem(-100);
+    animation: title_bottom 0.2s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes title_bottom {
+    100% { top: pxTorem(152);}
   }
   .message {
     top: pxTorem(255);
@@ -52,5 +68,24 @@
     position: absolute;
     margin: pxTorem(-25) pxTorem(-60);
     color: #b57405;
+  }
+  .message .item_list1{
+    margin-left: pxTorem(1500);
+    animation: item_list1 2s linear 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes item_list1 {
+    0% {margin-left: pxTorem(1500);}
+    70% {margin-left: pxTorem(200);transform: translateX(-65%);}
+    100% {margin-left: pxTorem(535);transform: translateX(-50%);}
+  }
+  .message .item_list2{
+    margin-right: pxTorem(1500);
+    animation: item_list2 2s linear 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes item_list2 {
+    70% {margin-right: 10%;transform: translateX(65%);}
+    100% {margin-right: 50%;transform: translateX(50%);}
   }
 }
